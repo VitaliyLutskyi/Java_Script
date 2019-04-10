@@ -9,7 +9,10 @@ if(login == "Admin"){
 	
 	else if(password != null)
 		alert ("Wrong password");
-	
+	else
+		alert("Canceled");
 }
 else if(login != null)
 	alert("I don't know you");
+else
+	alert("Canceled");
