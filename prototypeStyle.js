@@ -1,24 +1,35 @@
 function Robot(){}
-Robot.prototype.work = () => console.log('Я Robot – я просто працюю');
+Robot.prototype.work = function(){
+		switch(this.constructor.name){
+			case 'Robot':
+				console.log('Я Robot – я просто працюю');
+				break;
+			case 'RobotCooker':
+				console.log('Я RobotCoocker – я просто готую');
+				break;
+			case 'CoffeRobot':
+				console.log('Я CoffeRobot – я варю каву');
+				break;
+			case 'RobotDancer':
+				console.log('Я RobotDancer – я просто танцюю');
+				break;
+			default:
+				console.log('Я невідомий робот')
+		}
+	}
 
 
 function RobotCooker(){}
 RobotCooker.prototype = Object.create(Robot.prototype);
 RobotCooker.prototype.constructor = RobotCooker;
-RobotCooker.prototype.work = () => console.log('Я RobotCoocker – я просто готую');
-
 
 function CoffeRobot(){}
 CoffeRobot.prototype = Object.create(Robot.prototype);
 CoffeRobot.prototype.constructor = CoffeRobot;
-CoffeRobot.prototype.work=()=>console.log('Я CoffeRobot – я варю каву');
-
 
 function RobotDancer(){}
 RobotDancer.prototype = Object.create(Robot.prototype);
 RobotDancer.prototype.constructor = RobotDancer;
-RobotDancer.prototype.work=()=>console.log('Я RobotDancer – я просто танцюю');
-
 
 robot = new Robot();
 robotCooker = new RobotCooker();

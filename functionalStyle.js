@@ -1,21 +1,29 @@
 function Robot(){
-	this.work=()=>console.log('Я Robot – я просто працюю');
+	this.work = function(){
+		switch(this.constructor.name){
+			case 'Robot':
+				console.log('Я Robot – я просто працюю');
+				break;
+			case 'RobotCooker':
+				console.log('Я RobotCoocker – я просто готую');
+				break;
+			case 'CoffeRobot':
+				console.log('Я CoffeRobot – я варю каву');
+				break;
+			case 'RobotDancer':
+				console.log('Я RobotDancer – я просто танцюю');
+				break;
+			default:
+				console.log('Я невідомий робот')
+		}
+	}
 }
 
-function RobotCooker(){
-	Robot.call(this);
-	this.work=()=>console.log('Я RobotCoocker – я просто готую');
-}
+function RobotCooker(){ Robot.call(this);}
 
-function CoffeRobot(){
-	Robot.call(this);
-	this.work=()=>console.log('Я CoffeRobot – я варю каву');
-}
+function CoffeRobot(){	Robot.call(this);}
 
-function RobotDancer(){
-	Robot.call(this);
-	this.work=()=>console.log('Я RobotDancer – я просто танцюю');
-}
+function RobotDancer(){	Robot.call(this);}
 
 robot = new Robot();
 robotCooker = new RobotCooker();
