@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        form{
+            width: 250px;
+            margin: 50px;
+        }
+        label{
+            display: flex;
+            justify-content: space-between
+        }
+        .error{
+            border-color: red
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <label>Name: <input type="text" id="nameGet"></label><br>
+        <label>Surname: <input type="text" id="surnameGet"></label><br>
+        <label>Age: <input type="text" id="ageGet"></label><br>
+        <label>Address: <input type="text" id="addressGet"></label><br>
+        <input type="button" id="sendByGet" value="Send by GET">
+    </form>
+    <form>
+        <label>Name: <input type="text" id="namePost"></label><br>
+        <label>Surname: <input type="text" id="surnamePost"></label><br>
+        <label>Age: <input type="text" id="agePost"></label><br>
+        <label>Address: <input type="text" id="addressPost"></label><br>
+        <input type="button" id="sendByPost" value="Send by POST">
+    </form>
+    
+    <script src="ajax.js"></script>
+</body>
+</html>
