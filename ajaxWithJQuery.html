@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AjaxWithJQuery</title>
+    <style>
+        form{
+            width: 250px;
+            margin: 50px;
+            text-align: justify
+        }
+        label, div{
+            display: flex;
+            justify-content: space-between
+        }
+        .error{
+            border-color: red
+        }
+	</style>
+	<script
+		src = "https://code.jquery.com/jquery-1.12.4.min.js"
+		integrity = "sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+		crossorigin = "anonymous">
+	</script>
+	
+</head>
+<body>
+    <form>
+        <label>Name: <input type="text" id="name"></label><br>
+        <label>Surname: <input type="text" id="surname"></label><br>
+        <label>Age: <input type="text" id="age"></label><br>
+        <label>Address: <input type="text" id="address"></label><br>
+        <div>
+            <input type="button" id="sendByGet" value="Send by GET">
+            <input type="button" id="sendByPost" value="Send by POST">
+        </div>
+    </form>
+	<p></p>
+    
+    <script src="ajaxWithJQuery.js"></script>
+</body>
+</html>
